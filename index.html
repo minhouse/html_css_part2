@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="centered-container">
+    <h1>コース一覧</h1>
+    <table>
+      <!--trは行、thは見出し、tdはデータ-->
+      <tr>
+        <th>コース</th>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+      </tr>
+      <tr>
+        <th>前菜</th>
+        <td>アヒージョ</td>
+        <td>アクアパッツァ</td>
+        <td>ポトフ</td>
+      </tr>
+      <tr>
+        <th>主菜</th>
+        <td>パエリア</td>
+        <td>ボロネーゼ</td>
+        <td>フォアグラ</td>
+      </tr>
+      <tr>
+        <th>デザート</th>
+        <td>フラン</td>
+        <td>ティラミス</td>
+        <td>カヌレ</td>
+      </tr>
+    </table>
+
+    <h2>Reservation</h2>
+    <form action="/form.php" method="post">
+      <div>
+        <label for="name">名前</label><br />
+        <!--固有のID属性を設定する事でCSSセレクタで個別にボックスの大きさを調整できる-->
+        <input type="text" id="name" name="name" placeholder="Name" />
+      </div>
+      <div>
+        <label for="email">メールアドレス</label><br />
+        <input type="mail" id="email" name="email" placeholder="Mail Address" />
+      </div>
+      <div>
+        <label for="course">コース</label><br />
+        <input type="radio" id="itemA" name="item" value="A" />
+        <label for="itemA">A</label>
+        <input type="radio" id="itemB" name="item" value="B" />
+        <label for="itemB">B</label>
+        <input type="radio" id="itemC" name="item" value="C" />
+        <label for="itemC">C</label>
+      </div>
+      <div>
+        <label for="branch">支店名</label><br />
+        <select name="branch">
+          <option>スペイン</option>
+          <option>イタリア</option>
+          <option>フランス</option>
+        </select>
+      </div>
+      <div>
+        <label for="headcount">人数</label><br />
+        <input type="text" id="headcount" name="headcount" />
+      </div>
+      <div>
+        <label for="comment">コメント</label><br />
+        <textarea
+          name="comment"
+          id="comment"
+          cols="40"
+          rows="10"
+          placeholder="コメント"
+        ></textarea>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" name="checkbox" value="concent" />
+          同意する</label
+        >
+      </div>
+      <div class="submit-container">
+        <input type="submit" value="送信" />
+      </div>
+    </form>
+  </body>
+</html>
